@@ -171,9 +171,11 @@ function onIncreaseRemainingSecondsPressed() {
 
     increasingInterval = setInterval(() => {
         remainingSeconds += 60;
+
         if (remainingSeconds >= 5999) {
             remainingSeconds = 5999;
         }
+
         drawRemainingSecondsPanel();
     }, 250);
 
@@ -200,9 +202,11 @@ function onDecreaseRemainingSecondsPressed() {
 
     decreasingInterval = setInterval(() => {
         remainingSeconds -= 60;
+        
         if (remainingSeconds < 0) {
             remainingSeconds = 0;
         }
+
         drawRemainingSecondsPanel();
     }, 250);
 
